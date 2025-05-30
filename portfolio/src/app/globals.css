@@ -4,12 +4,9 @@
 html, body {
   height: 4053px;
   width: 100%;
-  font-family: 'Noto Sans', sans-serif;
 
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+  font-family: var(--font-inter, sans-serif);
 }
-
