@@ -13,7 +13,8 @@
     flex-direction: row;
     place-items: start center;
     align-items: center;
-    width: 100%;
+    margin: 0 auto;
+    width: 95%;
     height: 65%;
 
 }
@@ -30,20 +31,49 @@
     justify-content:  center;
     align-items: center;
     width: 100%;
-    gap: 1rem;
+    height: 100%;
+    gap: 0.5rem;
     
 }
 
-.nav a {
+/* .nav a {
     line-height:1.5rem;
     font-weight: 500;
     text-decoration: none;
-    color: inherit;
-        
-    
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+} */
+
+.paths a{
+    color: #62748E;
+    line-height:1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    transition: all 0.2s ease;
+    display: inline-block; /* transform 적용 가능하게 만듦 */
 }
 
 .body {
     width:100%;
     height: 100%;
+}
+
+.paths:hover{
+    background-color: #F9FAFC;
+}
+
+.paths:hover a {
+    color: black;
+    font-size:1.1rem;
+    transform: translateY(-2px);
+    
+}
+
+.paths {
+    height:100%;
+    display: flex;
+    align-items: center;
 }
