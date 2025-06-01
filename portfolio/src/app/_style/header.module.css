@@ -56,14 +56,14 @@
     
 }
 
-/* .nav a {
-    line-height:1.5rem;
-    font-weight: 500;
-    text-decoration: none;
-    padding-left: 1rem;
-    padding-right: 1rem;
-
-} */
+.paths.activePath a{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #F9FAFC;
+    color: black;
+    border-radius: 10px;
+}
 
 .paths a{
     color: #62748E;
@@ -83,6 +83,7 @@
 
 .paths:hover{
     background-color: #F9FAFC;
+    
 }
 
 .paths:hover a {
