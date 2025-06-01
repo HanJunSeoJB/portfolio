@@ -1,11 +1,30 @@
 
 .header {
-    border: 1px solid black;
-    width: 60%;
-    height: 1.5%;
+    /* border: 1px solid black; */
+    width: 80%;
+    height: 61px;
     display: flex;
     margin: 16px auto;
     align-items: center;
+    position:fixed;
+    top:0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+    background-color: transparent;
+    backdrop-filter: blur(0px);
+    z-index: 100;
+}
+
+.header.scrolled {
+    background-color: rgba(255, 255, 255, 0.5); /* 더 흐릿한 배경색 */
+    backdrop-filter: blur(5px); /* blur 효과 적용 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    display: flex;
+    justify-content: center;
 }
 
 .inner {
@@ -68,7 +87,8 @@
 .paths:hover a {
     color: black;
     font-size:1.1rem;
-    transform: translateY(-2px);
+    /* transform: translateY(-2px); */
+    transform: scale(1.1rem);
     
 }
 
@@ -76,4 +96,5 @@
     height:100%;
     display: flex;
     align-items: center;
+    border-radius: 10px;
 }

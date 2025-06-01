@@ -4,10 +4,15 @@ import Nav from "./_component/nav";
 export default function Home() {
   return (
     <div className={styles.body}>
-      <header className={styles.header}>
-        <Nav userName="HanJunseo"/>
-      </header>
+      <Nav userName="HanJunseo"/>
       <h1>Hello admin</h1>
+      <p className={styles.content}>Welcome to the portfolio page.</p>
+      <p className={styles.content}>Welcome to the portfolio page.</p>
+      <p className={styles.content}>Welcome to the portfolio page.</p>
+      <p className={styles.content}>Welcome to the portfolio page.</p>
+      <p className={styles.content}>Welcome to the portfolio page.</p>
+      <p className={styles.content}>Welcome to the portfolio page.</p>
+      <p className={styles.content}>Welcome to the portfolio page.</p>
     </div>
   );
 }
