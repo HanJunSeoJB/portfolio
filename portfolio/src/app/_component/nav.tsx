@@ -11,7 +11,7 @@ function Nav({ userName }: NavProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(()=> {
     const handleScroll = () => {
-      if(window.scrollY > 50) {
+      if(window.scrollY > 10) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -24,7 +24,7 @@ function Nav({ userName }: NavProps) {
     }
   }, []);
     return (
-      <div className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
+      <div data-testid="header" className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
         <div className={styles.inner}>    
           <span className={styles.name}>{userName}</span>
           <div className={styles.nav}>
