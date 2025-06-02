@@ -1,32 +1,26 @@
 import { useState } from "react";
 
 export function getUser() {
-  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   async function login(userId: string, userPw: string): Promise<boolean> {
-    const response = await fetch("https://oasis.jbnu.ac.kr/com/com/sstm/logn/findLoginNXOS.action", {
-      method: "POST",
-      headers: {
-        "accept": "*/*",
-        "content-type": "application/json",
-        "x-requested-with": "XMLHttpRequest",
-        "Referer": "https://oasis.jbnu.ac.kr/com/login.do"
-      },
-      body: JSON.stringify({
-        rType: "3tier",
-        loginType: "3tier",
-        userUid: userId,
-        userPwd: userPw,
-        langFg: "K",
-        loginGubun: "O",
-        loginSystem: "oasis"
-      })
-    });
+    try {
+      const response = await fetch('/api/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ userId, userPw }),
+      });
 
-    const data = await response.json();
-    const success = data.hasOwnProperty("authYn");
-    setIsLoggedIn(success);
-    return success;
+      const data = await response.json();
+      const success = Object.prototype.hasOwnProperty.call(data, "authYn");
+      setIsLoggedIn(success);
+      return success;
+    } catch (err) {
+      console.error("Login error:", err);
+      return false;
+    }
   }
 
   return { isLoggedIn, login };
