@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export function getUser() {
+export function useGetUser() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   async function login(userId: string, userPw: string): Promise<boolean> {

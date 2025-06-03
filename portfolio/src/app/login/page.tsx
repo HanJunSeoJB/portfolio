@@ -1,11 +1,11 @@
 'use client';
 import styles from "../_style/login_form.module.css"
 import { useState } from "react";
-import { getUser } from "../_hook/getUser";
+import { useGetUser } from "../_hook/getUser";
 
 export default function Login() {
     const [formData, setFormData] = useState({userId: "", userPw: ""});
-    const {isLoggedIn, login} = getUser();
+    const {login} = useGetUser();
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
