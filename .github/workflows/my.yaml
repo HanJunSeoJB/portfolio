@@ -8,9 +8,16 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: test CI/CD
+
+      - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
           node-version: '16'
-      - run: npm install
-      - run: npm test
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./portfolio
+
+      - name: Run tests
+        run: npm test
+        working-directory: ./portfolio
