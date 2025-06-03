@@ -30,6 +30,6 @@ export async function POST(req: Request) {
         return new Response(JSON.stringify({ success: false }), { status: 401 });
       }
     } catch (error) {
-      return new Response(JSON.stringify({ success: false, message: "Internal Server Error" }), { status: 500 });
+      return new Response(JSON.stringify({ success: false, message: error }), { status: 500 });
     }
   }
