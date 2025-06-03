@@ -1,11 +1,10 @@
 'use client';
 import styles from "../_style/login_form.module.css"
 import { useState } from "react";
-import { useGetUser } from "../_hook/getUser";
 
 export default function Login() {
     const [formData, setFormData] = useState({userId: "", userPw: ""});
-    const {login} = useGetUser();
+    // const {login} = useGetUser();
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -14,8 +13,17 @@ export default function Login() {
       const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         // 로그인 로직 추가 예정
-        const result = await login(formData.userId, formData.userPw);
-        if(result) {
+        const result = await fetch('/api/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                userId: formData.userId,
+                userPw: formData.userPw,
+            }),
+        })
+        if(result.status === 200) {
             alert("로그인 성공");
             // 로그인 성공 후 페이지 이동 또는 상태 업데이트 로직 추가
         }

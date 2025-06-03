@@ -24,15 +24,12 @@ export async function POST(req: Request) {
   
       const data = await res.json();
   
-      return new Response(JSON.stringify(data), {
-        status: 200,
-        headers: { "Content-Type": "application/json" },
-      });
-  
+      if (data.authYn) {
+        return new Response(JSON.stringify({ success: true }), { status: 200 });
+      } else {
+        return new Response(JSON.stringify({ success: false }), { status: 401 });
+      }
     } catch (error) {
-      console.error("API Error:", error);
-      return new Response(JSON.stringify({ error: "Internal Server Error" }), {
-        status: 500,
-      });
+      return new Response(JSON.stringify({ success: false, message: "Internal Server Error" }), { status: 500 });
     }
   }
