@@ -4,9 +4,16 @@
 html, body {
   height: 4053px;
   width: 100%;
+  margin: 0;
 
 }
 
-a {
+:root {
+  --font-notoSans: 'Noto Sans', sans-serif;
+  --font-inter: "Inter", sans-serif;
+}
+
+.a {
   font-family: var(--font-inter, sans-serif);
 }
+

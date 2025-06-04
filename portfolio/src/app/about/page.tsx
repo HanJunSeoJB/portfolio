@@ -1,4 +1,4 @@
-import Nav from "../_component/nav";
+import Nav from "../_component/_Header/nav";
 
 export default function About() {
     return (
