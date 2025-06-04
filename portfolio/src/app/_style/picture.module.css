@@ -10,7 +10,7 @@
 
 .picture {
     height: 100%;
-    width: 60%;
+    width: 80%;
     /* border: solid black; */
     border-radius: 50%;
     position: relative;  /* 필수! */

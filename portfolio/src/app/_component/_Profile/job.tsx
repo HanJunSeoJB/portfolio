@@ -14,17 +14,23 @@ const messages = [
 
 export default function Job() {
     const [index, setIndex] = useState(0);
-    
-        useEffect( () => {
-            const timer = setInterval(()=> {
+    const [animate, setAnimate] = useState(true);
+        
+    useEffect( () => {
+        const timer = setInterval(()=> {
+            setAnimate(false); 
+            setTimeout(() => {
                 setIndex((prev) => (prev + 1) % messages.length);
-            }, 3000);
+                setAnimate(true); 
+            }, 1000);
+        }, 2000);
     
             return () => clearInterval(timer);
         }, []);
     return (
-        <div>
-            <h3 className={`${style.dev} ${notoSans.className}`}>{messages[index]}</h3>
+        <div className={style.job}>
+            <h3 className={`${notoSans.className} ${animate? style.dev: ''}`}>{messages[index]}</h3>
+            
         </div>
     )
 }

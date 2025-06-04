@@ -42,9 +42,17 @@
 .hero h3 {
     font-size: 2rem;
     line-height: 2rem;
+    margin: 0;
+}
+
+.job {
+    width: 100%;
+    margin-top: 8px;
+    position: relative;
 }
 
 .hero p {
+    margin-top: 1rem;
     text-align: justify;
     font-size: 1rem;
     line-height: 1.5rem;
@@ -57,5 +65,41 @@
     display: flex;
     flex-direction: row;
     gap: 1rem;
+}
+
+.dev {
+    animation: fadeIn 0.5s ease-in-out; 
+}
+
+.dev h3 {
+    margin: 0;
+}
+
+.devNext {
+    animation: fadeOut 0.5s ease-in-out; 
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateY(30%); 
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0); 
+        opacity: 1; 
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        transform: translateY(0); 
+        opacity: 1; 
+    }
+
+    to {
+        transform: translateY(30%); 
+        opacity: 0;
+    }
 }
 
