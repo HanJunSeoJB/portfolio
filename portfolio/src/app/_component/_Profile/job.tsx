@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useState } from "react";
-import style from "../_style/profile.module.css"
+import style from "../../_style/profile.module.css"
 import { Noto_Sans } from "next/font/google";
 
 const notoSans = Noto_Sans({

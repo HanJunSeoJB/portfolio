@@ -1,7 +1,8 @@
 /* From Uiverse.io by alexroumi */ 
 .button {
     padding: 15px 25px;
-    border: unset;
+    border-color: rgba(0,0,0,0.27);
+    border-width: 1px;
     border-radius: 15px;
     color: #212121;
     z-index: 1;
@@ -9,8 +10,8 @@
     position: relative;
     font-weight: 1000;
     font-size: 17px;
-    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
-    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    -webkit-box-shadow: 4px 8px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px -3px rgba(0,0,0,0.27);
     transition: all 250ms;
     overflow: hidden;
     width: 157px;
@@ -33,7 +34,7 @@
     background-color: #212121;
     z-index: -1;
     -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
-    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px -3px rgba(0,0,0,0.27);
     transition: all 250ms
 }
 

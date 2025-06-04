@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
-import style from "../_style/profile.module.css";
+import style from "../../_style/profile.module.css";
 import { Noto_Sans } from "next/font/google";
 import Job from "./job";
-import ScrollButton from "./_Buttons/scrollButton";
-import ResumeDownloadButton from "./_Buttons/resumeButton";
+import ScrollButton from "../_Buttons/scrollButton";
+import ResumeDownloadButton from "../_Buttons/resumeButton";
+import Picture from "./picture";
 
 const notoSans = Noto_Sans({
     subsets: ["latin"],
@@ -27,6 +27,9 @@ export default function Profile() {
                         <ScrollButton/>
                         <ResumeDownloadButton/>
                     </div>
+                </div>
+                <div className={style.container}>
+                    <Picture/>
                 </div>
             </div>
         </div>

@@ -1,6 +1,6 @@
 'use client';
 import Link from "next/link";
-import styles from '../_style/header.module.css';
+import styles from '../../_style/header.module.css';
 import {useState, useEffect} from 'react';
 import { usePathname } from "next/navigation";
 import { Inter } from "next/font/google";

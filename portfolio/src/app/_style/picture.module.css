@@ -1,0 +1,24 @@
+.main {
+    height: 100%;
+    width: 100%;
+    /* border: solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.picture {
+    height: 100%;
+    width: 60%;
+    /* border: solid black; */
+    border-radius: 50%;
+    position: relative;  /* 필수! */
+    overflow: hidden;    /* 넘치는 이미지 자르기 */
+
+}
+
+
+.image {
+   object-fit: cover;  /* 채우되 비율 유지하면서 자르기 */
+}

@@ -34,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${notoSans.variable}`}>
+      <body>
         {children}
       </body>
     </html>
