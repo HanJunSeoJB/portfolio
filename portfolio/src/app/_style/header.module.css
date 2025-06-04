@@ -76,6 +76,7 @@
     padding-right: 1rem;
     transition: all 0.2s ease;
     display: inline-block; /* transform 적용 가능하게 만듦 */
+    font-family: inherit;
 }
 
 .body {
@@ -101,6 +102,7 @@
     display: flex;
     align-items: center;
     border-radius: 10px;
+    font-family: inherit;
 }
 
 @keyframes slidebottom {

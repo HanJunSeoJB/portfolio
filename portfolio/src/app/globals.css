@@ -7,6 +7,12 @@ html, body {
 
 }
 
-a {
+:root {
+  --font-notoSans: 'Noto Sans', sans-serif;
+  --font-inter: "Inter", sans-serif;
+}
+
+.a {
   font-family: var(--font-inter, sans-serif);
 }
+
