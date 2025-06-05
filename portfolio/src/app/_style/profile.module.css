@@ -47,8 +47,10 @@
 
 .job {
     width: 100%;
-    margin-top: 8px;
+    margin-top: 1rem;
     position: relative;
+    height: 2.5rem;
+    overflow: hidden;
 }
 
 .hero p {
@@ -67,39 +69,49 @@
     gap: 1rem;
 }
 
-.dev {
-    animation: fadeIn 0.5s ease-in-out; 
-}
-
 .dev h3 {
     margin: 0;
 }
 
-.devNext {
-    animation: fadeOut 0.5s ease-in-out; 
-}
+.message {
+    position: absolute;
+    width: 100%;
+    font-size: 1.5rem;
+    opacity: 0;
+    /* transform: translateY(20%); */
+  }
+  
+  .fadeIn {
+    animation: fadeUpIn 1s ease forwards;
+    z-index: 2;
+  }
+  
+  .fadeOut {
+    animation: fadeDownOut 1s ease forwards;
+    z-index: 1;
+  }
 
-@keyframes fadeIn {
-    from {
-        transform: translateY(30%); 
-        opacity: 0;
+  @keyframes fadeDownOut {
+    0% {
+      opacity: 1;
+      transform: translateY(0%);
     }
-
-    to {
-        transform: translateY(0); 
-        opacity: 1; 
+    50% {
+      transform: translateY(-10%);
     }
-}
-
-@keyframes fadeOut {
-    from {
-        transform: translateY(0); 
-        opacity: 1; 
+    100% {
+      opacity: 0;
+      transform: translateY(20%);
     }
-
-    to {
-        transform: translateY(30%); 
-        opacity: 0;
+  }
+  
+  @keyframes fadeUpIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20%);
     }
-}
-
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
