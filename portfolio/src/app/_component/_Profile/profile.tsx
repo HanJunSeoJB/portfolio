@@ -30,7 +30,7 @@ export default function Profile() {
                         <ScrollButton/>
                         <ResumeDownloadButton/>
                     </div>
-                    <div className={style.icons}>
+                    <div className={`${style.icons} ${style.fadeUpItem}`}>
                         <div className={style.icon}>
                             <a href="https://github.com/HanJunSeoJB">
                                 <FiGithub className={style.iconSize}/>
