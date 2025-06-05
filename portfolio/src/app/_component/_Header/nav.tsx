@@ -37,7 +37,7 @@ function Nav({ userName }: NavProps) {
           <div className={`${styles.nav} ${inter.className}`}>
             <div className={`${styles.paths} ${pathName === '/' ? styles.activePath: ''}`}><Link href ='/' className={inter.className}>Home</Link></div>
             <div className={`${styles.paths} ${pathName === '/about' ? styles.activePath: ''}`}><Link href ='/about' className={inter.className}>About</Link></div>
-            <div className={`${styles.paths} ${pathName === '/project' ? styles.activePath: ''}`}><Link href ='/project' className={inter.className}>Projects</Link></div>
+            <div className={`${styles.paths} ${pathName === '/project' ? styles.activePath: ''}`}><Link href ='/projects' className={inter.className}>Projects</Link></div>
             <div className={`${styles.paths} ${pathName === '/archiving' ? styles.activePath: ''}`}><Link href = '/archiving' className={inter.className}>Archiving</Link></div>
           </div>
         </div>
