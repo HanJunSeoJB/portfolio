@@ -8,40 +8,30 @@ const notoSans = Noto_Sans({ subsets: ["latin"] });
 const messages = ["프론트엔드 개발자", "데이터 분석가"];
 
 export default function Job() {
-  const [visibleText, setVisibleText] = useState({
-    current: 0,
-    next: 1,
-  });
-  const [isFirstVisible, setIsFirstVisible] = useState(true);
+  const [index, setIndex] = useState(0);
+  const [animationStage, setAnimationStage] = useState<"fade-in" | "wait" | "fade-out">("fade-in");
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setVisibleText((prev) => ({
-        current: prev.next,
-        next: (prev.next + 1) % messages.length,
-      }));
-      setIsFirstVisible((prev) => !prev);
-    }, 3000);
+    let timeout: NodeJS.Timeout;
 
-    return () => clearInterval(interval);
-  }, []);
+    if (animationStage === "fade-in") {
+      timeout = setTimeout(() => setAnimationStage("wait"), 500);
+    } else if (animationStage === "wait") {
+      timeout = setTimeout(() => setAnimationStage("fade-out"), 1000);
+    } else if (animationStage === "fade-out") {
+      timeout = setTimeout(() => {
+        setIndex((prev) => (prev + 1) % messages.length);
+        setAnimationStage("fade-in");
+      }, 500);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [animationStage]);
 
   return (
     <div className={style.job}>
-      <h3
-        className={`${notoSans.className} ${style.message} ${
-          isFirstVisible ? style.fadeIn : style.fadeOut
-        }`}
-      >
-        {messages[isFirstVisible ? visibleText.current : visibleText.next]}
-      </h3>
-
-      <h3
-        className={`${notoSans.className} ${style.message} ${
-          isFirstVisible ? style.fadeOut : style.fadeIn
-        }`}
-      >
-        {messages[isFirstVisible ? visibleText.next : visibleText.current]}
+      <h3 className={`${notoSans.className} ${style[animationStage]}`}>
+        {messages[index]}
       </h3>
     </div>
   );

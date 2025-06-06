@@ -28,6 +28,12 @@
 
 }
 
+.dev {
+    width: 100%;
+    height: fit-content;
+    /* margin-top: 1rem; */
+}
+
 .hero h1 {
     font-size: 3.5rem;
     color: black;
@@ -75,96 +81,88 @@
     animation: fadeUpIn 1s ease forwards;
 }
 
-.dev h3 {
-    margin: 0;
-}
-
 .message {
     position: absolute;
     width: 100%;
     font-size: 1.5rem;
   }
   
-  .fadeIn {
-    animation: fadeUpIn 1s ease forwards;
-    z-index: 2;
-  }
-  
-  .fadeOut {
-    animation: fadeDownOut 1s ease forwards;
-    z-index: 1;
+.fade-in {
+  animation: fadeUpIn 0.5s ease forwards;
+}
+
+.fade-out {
+  animation: fadeDownOut 0.5s ease forwards;
+}
+
+@keyframes fadeDownOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0%);
   }
 
-  @keyframes fadeDownOut {
-    0% {
-      opacity: 1;
-      transform: translateY(0%);
-    }
-    50% {
-      transform: translateY(-10%);
-    }
-    100% {
-      opacity: 0;
-      transform: translateY(20%);
-    }
-  }
-
-  .icons {
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-direction: row;
-    margin-top: 1.5rem;
-    gap: 1rem;
+  100% {
     opacity: 0;
-    animation: fadeUpIn 1s ease forwards;
+    transform: translateY(20%);
   }
+}
 
-  .icon a{
-    text-decoration: none;
-    width: 2rem;
-    height: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 1rem;
-    background-color: #F9FAFC;
-    color: black;
-  }
+.icons {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  margin-top: 1.5rem;
+  gap: 1rem;
+  opacity: 0;
+  animation: fadeUpIn 1s ease forwards;
+}
 
-  .icon:hover a {
-    background-color: #dedfe2;
-    transform: translateY(-10%)
-  }
+.icon a{
+  text-decoration: none;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  background-color: #F9FAFC;
+  color: black;
+}
 
-  .iconSize {
-    width: 1.2rem;
-    height: 1.2rem;
-  }
+.icon:hover a {
+  background-color: #dedfe2;
+  transform: translateY(-10%)
+}
 
-  .fadeUpItem {
-    animation: fadeUpItems 1s ease forwards;
-  }
-  
-  @keyframes fadeUpIn {
-    0% {
-      opacity: 0;
-      transform: translateY(20%);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0%);
-    }
-  }
+.iconSize {
+  width: 1.2rem;
+  height: 1.2rem;
+}
 
-  @keyframes fadeUpItems {
-    0% {
-      opacity: 0;
-      transform: translateY(30%);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0%);
-    }
+.fadeUpItem {
+  animation: fadeUpItems 0.5s ease forwards;
+}
+
+@keyframes fadeUpIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
   }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fadeUpItems {
+  0% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
 
