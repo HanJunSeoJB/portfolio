@@ -36,6 +36,8 @@
     font-family: var(--font-notoSans, sans-serif);
     margin: 0;
     margin-bottom: 2px;
+    opacity: 0;
+    animation: fadeUpIn 1s ease forwards;
     
 }
 
@@ -60,6 +62,8 @@
     line-height: 1.5rem;
     font-weight: 400;
     color: #62748E; 
+    opacity: 0;
+    animation: fadeUpIn 1s ease forwards;
 }
 
 .contact {
@@ -67,6 +71,8 @@
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    opacity: 0;
+    animation: fadeUpIn 1s ease forwards;
 }
 
 .dev h3 {
@@ -77,7 +83,6 @@
     position: absolute;
     width: 100%;
     font-size: 1.5rem;
-    opacity: 0;
   }
   
   .fadeIn {
@@ -111,6 +116,8 @@
     flex-direction: row;
     margin-top: 1.5rem;
     gap: 1rem;
+    opacity: 0;
+    animation: fadeUpIn 1s ease forwards;
   }
 
   .icon a{
