@@ -1,0 +1,44 @@
+.main {
+    width: 100%;
+    height: 25%;
+    background-color: #F9FAFC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    text-align: center;
+    margin: 0;  
+}
+
+.div h2 {
+    width: 100%;
+    margin: 0;
+    font-size: 3rem;
+    line-height: 3rem;
+    font-weight: bold;
+    font-family: inherit;
+}
+
+.div p {
+    width: 100%;
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 400;
+    color: #62748E;
+
+}
+
+.projectCard {
+    width: 80%;
+    height: 60%;
+    
+}
