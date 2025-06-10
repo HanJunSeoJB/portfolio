@@ -2,9 +2,8 @@ import style from "../../_style/_project/project_card.module.css"
 import Image from "next/image"
 import projectImage_1 from "../../../../public/images/projects/project_1.png"
 import { Noto_Sans } from "next/font/google"
-// import { FaArrowRightLong } from "react-icons/fa6";
 import { IoMdArrowForward } from "react-icons/io";
-
+import { FiGithub } from "react-icons/fi";
 
 
 
@@ -42,7 +41,7 @@ export default function ProjectCard() {
                     </div>
                     <div className={style.descriptionHeader}>
                         <IoMdArrowForward className={style.arrow}/>
-                        <p>컴포넌트를 체계적으로 분리하고, DB에서 사용자 정보를 불러와 포트폴리오를 구성할 수 있도록 구현했습니다.</p>
+                        <p>컴포넌트를 체계적으로 분리하고, DB에서 사용자 정보를 불러와 포트폴리오를 구성할 수 있도록 <br/>구현했습니다.</p>
                     </div>
                     
                 </div>
@@ -51,6 +50,9 @@ export default function ProjectCard() {
                 <a href="/projects" className={style.buttonLink}>
                     자세히 보기
                     <IoMdArrowForward className={style.buttonIcon}/>
+                </a>
+                <a href="https://github.com/HanJunSeoJB/portfolio" className={style.iconContainer}>
+                    <FiGithub className={style.icon} />
                 </a>
             </div>
         </div>
