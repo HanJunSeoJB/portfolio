@@ -10,7 +10,7 @@
 
 .picture {
     height: 100%;
-    width: 80%;
+    aspect-ratio: 1 / 1;  /* 정사각형 비율 유지 */
     /* border: solid black; */
     border-radius: 50%;
     position: relative;  /* 필수! */

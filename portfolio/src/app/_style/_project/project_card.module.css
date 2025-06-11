@@ -109,6 +109,7 @@
     text-align: center;
     white-space: pre-line;
     color: #61738E;
+     word-break: keep-all;
 
 }
 

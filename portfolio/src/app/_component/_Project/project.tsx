@@ -15,6 +15,8 @@ export default function Project() {
             </div>
             <div className={style.projectCard}>
                 <ProjectCard/>
+                <ProjectCard/>
+                <ProjectCard/>
             </div>
         </div>
     )
